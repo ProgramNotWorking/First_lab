@@ -1,6 +1,6 @@
 import rectangle
 import two_numbers
-import divider
+import money
 
 
 task = int(input('Enter task number: '))
@@ -22,17 +22,22 @@ while True:
         break
     elif task == 2:
         numbers = two_numbers.Numbers(
-            int(input('Enter a: ')),
-            int(input('Enter b: '))
+            int(input('Enter K: ')),
+            int(input('Enter N: '))
         )
-        numbers.print_result()
+        numbers.get_result()
 
         break
     elif task == 3:
-        divider = divider.Divider(
-            int(input("Enter number: "))
+        percent = int(input('Enter percent (between 0 and 25): '))
+
+        while percent <= 0 or percent >= 25:
+            percent = int(input('Between 0 and 25 i said >:3'))
+
+        money_task = money.Money(
+            percent
         )
-        divider.print_result()
+        money_task.find_deposit()
 
         break
     else:

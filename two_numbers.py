@@ -4,13 +4,7 @@ class Numbers:
         self.__a = a
         self.__b = b
 
-    def print_result(self):
-        count = 1
-        print(self.__a)
-
-        for n in range(self.__b - self.__a):
-            count += 1
-            print(self.__a + count)
-
-        print(count)
+    def get_result(self):
+        for number in range(0, self.__b):
+            print(self.__a)
 
